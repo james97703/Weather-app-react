@@ -99,11 +99,6 @@ const controlSearch = async function () {
 	}
 };
 
-/**
- * Controls when user clicks day from next days
- * @param {Object | Node} dayEl Day element from next days
- */
-
 const controlDay = function controlNextDays(dayEl) {
 	// + to convert index to number
 	const index = +$(dayEl).attr('data-day');
@@ -111,7 +106,6 @@ const controlDay = function controlNextDays(dayEl) {
 
 	state.forecast[0].current = state.forecast[0].daily[index];
 	state.forecast[1].current = state.forecast[1].daily[index];
-
 	renderForecast();
 };
 
